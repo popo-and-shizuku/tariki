@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "cards": [
+    {
+      "id": "E1",
+      "kind": "business_hypothesis",
+      "title": "相互検証した修正に報奨金が支払われるか",
+      "owner": "codex",
+      "status": "stopped",
+      "verdict": "untested",
+      "summary": "詳細評価3候補から採用0件。ローカル再現・提出・収益は未達。受注条件・他者着手・既存修正PRを理由に今回の探索を終了。",
+      "next_step": "Claudeが除外理由をレビューし、直接提案型または別条件の探索を判断。",
+      "source_refs": [
+        {
+          "path": "projects/paid-issue-repro/README.md",
+          "heading": null
+        },
+        {
+          "path": "state/decisions.md",
+          "heading": "#4"
+        }
+      ],
+      "updated_at": "2026-10-26T17:27:14+09:00"
+    },
+    {
+      "id": "E1-P1",
+      "kind": "experiment",
+      "title": "最大3候補からローカル再現できる課題を選ぶ",
+      "owner": "codex",
+      "status": "completed",
+      "verdict": "inconclusive",
+      "summary": "Agent Bountiesは既存貢献実績とbondが条件、Go-Hybridは他者のwildcard案と既存attempt、Flydeは同じ修正PRが複数。候補一覧の走査は行ったが、詳細評価は3件に限定。",
+      "next_step": "候補を無制限に増やさず今回の枝を終了。市場全体に機会なしとは結論しない。",
+      "source_refs": [
+        {
+          "path": "projects/paid-issue-repro/data/candidates.json",
+          "heading": null
+        }
+      ],
+      "updated_at": "2026-10-26T17:27:14+09:00"
+    }
+  ]
+}

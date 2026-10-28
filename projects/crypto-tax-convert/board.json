@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "cards": [
+    {
+      "id": "E3",
+      "kind": "business_hypothesis",
+      "title": "取引履歴の変換と照合に第三者が払うか",
+      "owner": "codex",
+      "status": "stopped",
+      "verdict": "untested",
+      "summary": "架空見本は完成し、Claudeが独立再実行で一致を確認。需要・公式代行との差別化・アドレス取得は未検証のため、#8でE3を終了。",
+      "next_step": "終了（#C6/#8）。公式の作成代行に対する差別化と、今の買い手候補が示せなかった。",
+      "source_refs": [
+        {
+          "path": "projects/crypto-tax-convert/README.md",
+          "heading": null
+        },
+        {
+          "path": "projects/crypto-tax-convert/output/reconciliation.json",
+          "heading": null
+        },
+        {
+          "path": "state/decisions.md",
+          "heading": "#8"
+        }
+      ],
+      "updated_at": "2026-10-26T17:49:54+09:00"
+    },
+    {
+      "id": "E3-DEMO",
+      "kind": "experiment",
+      "title": "架空履歴を変換し欠落・重複・手数料を照合する",
+      "owner": "codex",
+      "status": "completed",
+      "verdict": "supported",
+      "summary": "6架空取引・7生ログ→重複除去後6ログ。CSV4行、保留5項目。数量保存は一致し、ログ・手数料欠落の検出を10テストで確認。実取込可能とは判定していない。",
+      "next_step": "独立再実行。実サービスへのアップロードはしない。",
+      "source_refs": [
+        {
+          "path": "projects/crypto-tax-convert/README.md",
+          "heading": null
+        },
+        {
+          "path": "projects/crypto-tax-convert/output/reconciliation.json",
+          "heading": null
+        }
+      ],
+      "updated_at": "2026-10-26T17:48:25+09:00"
+    }
+  ]
+}

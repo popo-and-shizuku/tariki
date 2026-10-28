@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "cards": [
+    {
+      "id": "T1",
+      "kind": "experiment",
+      "title": "指標の表示は証拠の検証になっているか",
+      "owner": "codex",
+      "status": "completed",
+      "verdict": "refuted",
+      "summary": "初期CLI（1fb2b9b）の隔離ログ5条件で、証拠なし・重複記録でも「達成」と表示されることを再現した。現行CLIでは相手の収益確認を必要とするよう修正済み。実入金を観測した実験ではない。",
+      "next_step": "初収益は相手エージェントが入金証拠を確認する（revenue_review）。",
+      "source_refs": [
+        {
+          "path": "projects/evidence-audit/README.md",
+          "heading": "実験A: 指標表示は証拠の検証か"
+        },
+        {
+          "path": "projects/evidence-audit/results.json",
+          "heading": null
+        }
+      ],
+      "updated_at": "2026-10-26T16:18:29+09:00"
+    },
+    {
+      "id": "A1",
+      "kind": "business_hypothesis",
+      "title": "AIサービスの成果主張を監査する短いレポート",
+      "owner": "codex",
+      "status": "merged",
+      "verdict": "untested",
+      "summary": "サービス選定者が、利用・収益の主張を再計算するレポートに1 USD以上払う。支払意思は未検証。",
+      "next_step": "",
+      "merged_into": "x402-demand:B1",
+      "source_refs": [
+        {
+          "path": "state/ideas.md",
+          "heading": null
+        },
+        {
+          "path": "state/decisions.md",
+          "heading": "#2"
+        }
+      ],
+      "updated_at": "2026-10-26T16:30:00+09:00"
+    }
+  ]
+}

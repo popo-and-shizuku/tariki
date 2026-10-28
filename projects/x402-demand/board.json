@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "cards": [
+    {
+      "id": "B1",
+      "kind": "business_hypothesis",
+      "title": "x402サービスの実需チェック",
+      "owner": "claude",
+      "status": "stopped",
+      "verdict": "untested",
+      "summary": "撤退（#C3/#4）。理由は需要ゼロではなく、無料の代替（公式検索の利用指標・validator・SDKのフック）に対して上乗せできる価値と、買う理由が立証できないこと。支払意思そのものは検証していない。",
+      "next_step": "再開条件: 独立した利用者の具体的な判断用途と、無料の指標との差分への支払意思が確認できた場合。",
+      "source_refs": [
+        {
+          "path": "state/decisions.md",
+          "heading": "#4"
+        },
+        {
+          "path": "projects/x402-demand/codex_b1_review.md",
+          "heading": null
+        }
+      ],
+      "updated_at": "2026-10-26T17:21:17+09:00"
+    },
+    {
+      "id": "H1",
+      "kind": "experiment",
+      "title": "x402に独立した実需がある",
+      "owner": "claude",
+      "status": "stopped",
+      "verdict": "inconclusive",
+      "summary": "上位のpayToには、多数の別ウォレットから反復的なUSDC送金が届いていた（送金者あたり平均150〜205回。多数派の行動ではない）。特定APIの購入かどうか、ウォレットが独立しているかは未確認。価格一致の上限は保存済み2件で33.5%・42.9%（Codex）。",
+      "next_step": "末端の需要はV1で確認する。",
+      "source_refs": [
+        {
+          "path": "projects/x402-demand/README.md",
+          "heading": "結果（暫定・人間の指示によりオンチェーン取得を途中で打ち切り）"
+        },
+        {
+          "path": "projects/x402-demand/data/partial_result.json",
+          "heading": null
+        }
+      ],
+      "updated_at": "2026-10-26T17:32:44+09:00"
+    },
+    {
+      "id": "H2",
+      "kind": "experiment",
+      "title": "支払者の多くは目録を巡回して試し払いするボット",
+      "owner": "claude",
+      "status": "stopped",
+      "verdict": "inconclusive",
+      "summary": "無関係な2サービスの支払者の重なりは910人中2人で、この1組では巡回ボット説を支持する材料はない。ただし比較は1組だけなので、判定は保留する。",
+      "next_step": "",
+      "source_refs": [
+        {
+          "path": "projects/x402-demand/data/partial_result.json",
+          "heading": null
+        }
+      ],
+      "updated_at": "2026-10-26T16:15:00+09:00"
+    },
+    {
+      "id": "V1",
+      "kind": "experiment",
+      "title": "末端の小規模サービスにも支払者が来るか",
+      "owner": "claude",
+      "status": "completed",
+      "verdict": "inconclusive",
+      "summary": "小規模payTo 6件中4件は、支払者が1〜3人だった（運営者のテストと区別できない）。残り2件は支払者が多かった（CoinGecko 21人、openwebninja は2ウォレットで4,771回）が、価格一致は購入の十分条件ではない。txHashは未保存。",
+      "next_step": "無名の新規サービスに買い手が来る根拠は弱い。B1の判断材料とする。",
+      "source_refs": [
+        {
+          "path": "projects/x402-demand/README.md",
+          "heading": "V1・V2 の結果（claude, 2026-10-26 夕方）"
+        },
+        {
+          "path": "projects/x402-demand/data/v1_result.json",
+          "heading": null
+        }
+      ],
+      "updated_at": "2026-10-26T17:32:44+09:00"
+    },
+    {
+      "id": "V2",
+      "kind": "experiment",
+      "title": "同種の評価・監査系サービスは既にあるか",
+      "owner": "claude",
+      "status": "completed",
+      "verdict": "supported",
+      "summary": "1,000件のサンプル内だけで、隣接用途（エンドポイント検査、掲載検証、取引相手リスク、検証済みディレクトリ）の供給が4種あった。どれも30日の支払者は3〜5人。供給の存在は確認できたが、需要ゼロや飽和の証明ではない。",
+      "next_step": "#4でB1から撤退した（根拠は無料代替に対する増分価値の未立証）。",
+      "source_refs": [
+        {
+          "path": "projects/x402-demand/README.md",
+          "heading": "V1・V2 の結果（claude, 2026-10-26 夕方）"
+        },
+        {
+          "path": "projects/x402-demand/data/v2_result.json",
+          "heading": null
+        }
+      ],
+      "updated_at": "2026-10-26T17:32:44+09:00"
+    },
+    {
+      "id": "V3",
+      "kind": "experiment",
+      "title": "買い手のエージェントは呼び出し先の選択に外部評価を使うか",
+      "owner": "claude",
+      "status": "stopped",
+      "verdict": "inconclusive",
+      "summary": "CodexがSDKの支払い前フック（onBeforePaymentCreation）の存在を確認した。技術的には差し込めるが、開発者が有料の判定を組み込むかは別の仮説で、未検証。",
+      "next_step": "B1撤退（#4）により中断。",
+      "source_refs": [
+        {
+          "path": "projects/x402-demand/codex_b1_review.md",
+          "heading": "1. 誰が、なぜ払うか"
+        }
+      ],
+      "updated_at": "2026-10-26T17:32:44+09:00"
+    }
+  ]
+}

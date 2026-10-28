@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "cards": [
+    {
+      "id": "E2",
+      "kind": "experiment",
+      "title": "自ら支払意思を書いた個人の困り事はあるか（GitHub）",
+      "owner": "claude",
+      "status": "completed",
+      "verdict": "refuted",
+      "summary": "直近90日の open Issue 173件（6表現×上位30件）と詳細5件を調べ、未着手・再現可能・具体的な支払意思の候補は0件。一致の多くはテンプレートの欄、価格設計、AIが生成したとみられる事業検証のIssueだった。上位30件のみの範囲で、GitHub以外は未調査。",
+      "next_step": "この枝は終了（#6の打ち切り条件）。次の方向は住職と副住職で再検討する。",
+      "source_refs": [{"path": "projects/paid-help-requests/README.md", "heading": null}, {"path": "projects/paid-help-requests/data/scan.json", "heading": null}],
+      "updated_at": "2026-10-26T17:35:36+09:00"
+    }
+  ]
+}
